@@ -87,7 +87,7 @@ public class AddSchedulepencil extends AppCompatActivity {
             public void onClick(View v) {
                 String data =  (day_)+ "/"+edit.getText().toString()+"/"+hour_time+"/"+min_time+"\n";
                 try{
-                    FileOutputStream fos = openFileOutput("data9.txt", Context.MODE_APPEND);
+                    FileOutputStream fos = openFileOutput("data0.txt", Context.MODE_APPEND);
                     PrintWriter pw = new PrintWriter(fos);
                     pw.print(data);
                     pw.close();

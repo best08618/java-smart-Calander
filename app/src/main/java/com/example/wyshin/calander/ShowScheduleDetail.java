@@ -37,7 +37,7 @@ public class ShowScheduleDetail extends AppCompatActivity {
         MyAdapter mMyAdapter = new MyAdapter();
 
         try {
-            FileInputStream fis = openFileInput("data9.txt");
+            FileInputStream fis = openFileInput("data0.txt");
             BufferedReader br = new BufferedReader(new InputStreamReader(fis));
             String str;
             while (true) {

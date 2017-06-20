@@ -186,13 +186,14 @@ public class MainActivity extends AppCompatActivity {
                 show();
             }
         });
+        /*
         alarm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),AlarmMainPage.class);
                 startActivity(intent);
             }
-        });
+        });*/
     }
 
     public void show() {
@@ -223,7 +224,7 @@ public class MainActivity extends AppCompatActivity {
     public void getdata() {
         //file 읽어오기
         try {
-            FileInputStream fis = openFileInput("data9.txt");
+            FileInputStream fis = openFileInput("data0.txt");
             BufferedReader br = new BufferedReader(new InputStreamReader(fis));
             while (true) {
                 temp = br.readLine();

@@ -37,10 +37,10 @@ public class AlarmDayPicker extends AppCompatActivity {
             }
         });
     }
-
+/*
     private void display_date(){
         mDate.setText(new StringBuilder().append(year_).append(" / ").append(month_ + 1).append(" / ").append(day_));
-    }
+    }*/
 
     private DatePickerDialog.OnDateSetListener mDateSetListener = new DatePickerDialog.OnDateSetListener() {
         @Override
@@ -48,7 +48,7 @@ public class AlarmDayPicker extends AppCompatActivity {
             year_ = year;
             month_ = month;
             day_ = dayOfMonth;
-            display_date();
+            //display_date();
         }
     };
 }

@@ -1,10 +1,12 @@
 package com.example.wyshin.calander;
 
+import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 
 public class MyItem {
 
     private Drawable icon;
+    private Bitmap bm;
     private String name;
     private String contents;
     private String time;

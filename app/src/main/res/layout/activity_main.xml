@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.wyshin.calander.MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context="com.example.wyshin.calander.MainActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -37,10 +37,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="#fe4365"
             android:gravity="center"
             android:paddingBottom="15dp"
             android:text="JUNE"
-            android:background="#fe4365"
             android:textColor="#ffffff"
             android:textSize="18dp" />
 
@@ -62,70 +62,70 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:textColor="#fffcf0"
                 android:background="#fc9d9a"
-                android:text="SUN" />
+                android:gravity="center"
+                android:text="SUN"
+                android:textColor="#fffcf0" />
 
             <TextView
                 android:id="@+id/mon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:textColor="#fffcf0"
                 android:background="#fc9d9a"
-                android:text="MON" />
+                android:gravity="center"
+                android:text="MON"
+                android:textColor="#fffcf0" />
 
             <TextView
                 android:id="@+id/tue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:textColor="#fffcf0"
                 android:background="#fc9d9a"
-                android:text="TUE" />
+                android:gravity="center"
+                android:text="TUE"
+                android:textColor="#fffcf0" />
 
             <TextView
                 android:id="@+id/wed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:textColor="#fffcf0"
                 android:background="#fc9d9a"
-                android:text="WED" />
+                android:gravity="center"
+                android:text="WED"
+                android:textColor="#fffcf0" />
 
             <TextView
                 android:id="@+id/thu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:textColor="#fffcf0"
                 android:background="#fc9d9a"
-                android:text="THU " />
+                android:gravity="center"
+                android:text="THU "
+                android:textColor="#fffcf0" />
 
             <TextView
                 android:id="@+id/fri"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:textColor="#fffcf0"
                 android:background="#fc9d9a"
-                android:text="FRI " />
+                android:gravity="center"
+                android:text="FRI "
+                android:textColor="#fffcf0" />
 
             <TextView
                 android:id="@+id/sat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:textColor="#fffcf0"
                 android:background="#fc9d9a"
-                android:text="SAT" />
+                android:gravity="center"
+                android:text="SAT"
+                android:textColor="#fffcf0" />
         </LinearLayout>
 
         <LinearLayout
@@ -171,25 +171,57 @@
                 android:background="@drawable/button_change_black"
                 android:gravity="" />
 
-            <Button
-                android:id="@+id/day05"
-                style="?android:attr/borderlessButtonStyle"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/button_change_black"
-                android:gravity=""
-                android:text="1" />
+                android:orientation="vertical">
 
-            <Button
-                android:id="@+id/day06"
-                style="?android:attr/borderlessButtonStyle"
+                <Button
+                    android:id="@+id/day05"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_change_black"
+                    android:gravity=""
+                    android:text="1" />
+
+                <TextView
+                    android:id="@+id/show1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#f8ecc9"
+                    android:text=""
+                    android:textColor="#e97f02"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/button_change_black"
-                android:gravity=""
-                android:text="2" />
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/day06"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_change_black"
+                    android:gravity=""
+                    android:text="2" />
+
+                <TextView
+                    android:id="@+id/show2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#f8ecc9"
+                    android:text=""
+                    android:textColor="#e97f02"
+                    android:textSize="15dp" />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -211,10 +243,10 @@
                     android:id="@+id/show3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:background="#f8ecc9"
                     android:text=""
-                    android:textSize="15dp"
                     android:textColor="#e97f02"
-                    android:background="#f8ecc9"/>
+                    android:textSize="15dp" />
             </LinearLayout>
         </LinearLayout>
 
@@ -225,25 +257,57 @@
             android:background="@drawable/layout_border"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/day11"
-                style="?android:attr/borderlessButtonStyle"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/button_change_black"
-                android:gravity=""
-                android:text="4" />
+                android:orientation="vertical">
 
-            <Button
-                android:id="@+id/day12"
-                style="?android:attr/borderlessButtonStyle"
+                <Button
+                    android:id="@+id/day11"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_change_black"
+                    android:gravity=""
+                    android:text="4" />
+
+                <TextView
+                    android:id="@+id/show4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#f8ecc9"
+                    android:text=""
+                    android:textColor="#e97f02"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/button_change_black"
-                android:gravity=""
-                android:text="5" />
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/day12"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_change_black"
+                    android:gravity=""
+                    android:text="5" />
+
+                <TextView
+                    android:id="@+id/show5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#f8ecc9"
+                    android:text=""
+                    android:textColor="#e97f02"
+                    android:textSize="15dp" />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -264,51 +328,115 @@
                     android:id="@+id/show6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="15dp"
-                    android:textColor="#e97f02"
                     android:background="#f8ecc9"
-                    android:text="" />
+                    android:text=""
+                    android:textColor="#e97f02"
+                    android:textSize="15dp" />
             </LinearLayout>
 
-            <Button
-                android:id="@+id/day14"
-                style="?android:attr/borderlessButtonStyle"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/button_change_black"
-                android:gravity=""
-                android:text="7" />
+                android:orientation="vertical">
 
-            <Button
-                android:id="@+id/day15"
-                style="?android:attr/borderlessButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/button_change_black"
-                android:gravity=""
-                android:text="8" />
+                <Button
+                    android:id="@+id/day14"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_change_black"
+                    android:gravity=""
+                    android:text="7" />
 
-            <Button
-                android:id="@+id/day16"
-                style="?android:attr/borderlessButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/button_change_black"
-                android:gravity=""
-                android:text="9" />
+                <TextView
+                    android:id="@+id/show7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#f8ecc9"
+                    android:text=""
+                    android:textColor="#e97f02"
+                    android:textSize="15dp" />
+            </LinearLayout>
 
-            <Button
-                android:id="@+id/day17"
-                style="?android:attr/borderlessButtonStyle"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/button_change_black"
-                android:gravity=""
-                android:text="10" />
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/day15"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_change_black"
+                    android:gravity=""
+                    android:text="8" />
+
+                <TextView
+                    android:id="@+id/show8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#f8ecc9"
+                    android:text=""
+                    android:textColor="#e97f02"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/day16"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_change_black"
+                    android:gravity=""
+                    android:text="9" />
+
+                <TextView
+                    android:id="@+id/show9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#f8ecc9"
+                    android:text=""
+                    android:textColor="#e97f02"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/day17"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_change_black"
+                    android:gravity=""
+                    android:text="10" />
+
+                <TextView
+                    android:id="@+id/show10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#f8ecc9"
+                    android:text=""
+                    android:textColor="#e97f02"
+                    android:textSize="15dp" />
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -318,45 +446,109 @@
             android:background="@drawable/layout_border"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/day21"
-                style="?android:attr/borderlessButtonStyle"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/button_change_black"
-                android:gravity=""
-                android:text="11" />
+                android:orientation="vertical">
 
-            <Button
-                android:id="@+id/day22"
-                style="?android:attr/borderlessButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/button_change_black"
-                android:gravity=""
-                android:text="12" />
+                <Button
+                    android:id="@+id/day21"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_change_black"
+                    android:gravity=""
+                    android:text="11" />
 
-            <Button
-                android:id="@+id/day23"
-                style="?android:attr/borderlessButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/button_change_black"
-                android:gravity=""
-                android:text="13" />
+                <TextView
+                    android:id="@+id/show11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#f8ecc9"
+                    android:text=""
+                    android:textColor="#e97f02"
+                    android:textSize="15dp" />
+            </LinearLayout>
 
-            <Button
-                android:id="@+id/day24"
-                style="?android:attr/borderlessButtonStyle"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/button_change_black"
-                android:gravity=""
-                android:text="14" />
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/day22"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_change_black"
+                    android:gravity=""
+                    android:text="12" />
+
+                <TextView
+                    android:id="@+id/show12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#f8ecc9"
+                    android:text=""
+                    android:textColor="#e97f02"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/day23"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_change_black"
+                    android:gravity=""
+                    android:text="13" />
+
+                <TextView
+                    android:id="@+id/show13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#f8ecc9"
+                    android:text=""
+                    android:textColor="#e97f02"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/day24"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_change_black"
+                    android:gravity=""
+                    android:text="14" />
+
+                <TextView
+                    android:id="@+id/show14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#f8ecc9"
+                    android:text=""
+                    android:textColor="#e97f02"
+                    android:textSize="15dp" />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -370,38 +562,70 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/button_change_black"
-                    android:textSize="15dp"
                     android:gravity=""
-                    android:text="15" />
+                    android:text="15"
+                    android:textSize="15dp" />
 
                 <TextView
                     android:id="@+id/show15"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:background="#f8ecc9"
                     android:text=""
-                    android:textColor="#e97f02"
-                    android:background="#f8ecc9" />
+                    android:textColor="#e97f02" />
             </LinearLayout>
 
-            <Button
-                android:id="@+id/day26"
-                style="?android:attr/borderlessButtonStyle"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/button_change_black"
-                android:gravity=""
-                android:text="16" />
+                android:orientation="vertical">
 
-            <Button
-                android:id="@+id/day27"
-                style="?android:attr/borderlessButtonStyle"
+                <Button
+                    android:id="@+id/day26"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_change_black"
+                    android:gravity=""
+                    android:text="16" />
+
+                <TextView
+                    android:id="@+id/show16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#f8ecc9"
+                    android:text=""
+                    android:textColor="#e97f02"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/button_change_black"
-                android:gravity=""
-                android:text="17" />
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/day27"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_change_black"
+                    android:gravity=""
+                    android:text="17" />
+
+                <TextView
+                    android:id="@+id/show17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#f8ecc9"
+                    android:text=""
+                    android:textColor="#e97f02"
+                    android:textSize="15dp" />
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -411,35 +635,83 @@
             android:background="@drawable/layout_border"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/day31"
-                style="?android:attr/borderlessButtonStyle"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/button_change_black"
-                android:gravity=""
-                android:text="18" />
+                android:orientation="vertical">
 
-            <Button
-                android:id="@+id/day32"
-                style="?android:attr/borderlessButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/button_change_black"
-                android:gravity=""
-                android:text="19" />
+                <Button
+                    android:id="@+id/day31"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_change_black"
+                    android:gravity=""
+                    android:text="18" />
 
-            <Button
-                android:id="@+id/day33"
-                style="?android:attr/borderlessButtonStyle"
+                <TextView
+                    android:id="@+id/show18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#f8ecc9"
+                    android:text=""
+                    android:textColor="#e97f02"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/button_change_black"
-                android:gravity=""
-                android:text="20" />
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/day32"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_change_black"
+                    android:gravity=""
+                    android:text="19" />
+
+                <TextView
+                    android:id="@+id/show19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#f8ecc9"
+                    android:text=""
+                    android:textColor="#e97f02"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/day33"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_change_black"
+                    android:gravity=""
+                    android:text="20" />
+
+                <TextView
+                    android:id="@+id/show20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#f8ecc9"
+                    android:text=""
+                    android:textColor="#e97f02"
+                    android:textSize="15dp" />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -463,39 +735,87 @@
                     android:layout_height="wrap_content"
                     android:background="#f8ecc9"
                     android:text=""
-                    android:textSize="15dp"
-                    android:textColor="#e97f02" />
+                    android:textColor="#e97f02"
+                    android:textSize="15dp" />
             </LinearLayout>
 
-            <Button
-                android:id="@+id/day35"
-                style="?android:attr/borderlessButtonStyle"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/button_change_black"
-                android:gravity=""
-                android:text="22" />
+                android:orientation="vertical">
 
-            <Button
-                android:id="@+id/day36"
-                style="?android:attr/borderlessButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/button_change_black"
-                android:gravity=""
-                android:text="23" />
+                <Button
+                    android:id="@+id/day35"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_change_black"
+                    android:gravity=""
+                    android:text="22" />
 
-            <Button
-                android:id="@+id/day37"
-                style="?android:attr/borderlessButtonStyle"
+                <TextView
+                    android:id="@+id/show22"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#f8ecc9"
+                    android:text=""
+                    android:textColor="#e97f02"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/button_change_black"
-                android:gravity=""
-                android:text="24" />
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/day36"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_change_black"
+                    android:gravity=""
+                    android:text="23" />
+
+                <TextView
+                    android:id="@+id/show23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#f8ecc9"
+                    android:text=""
+                    android:textColor="#e97f02"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/day37"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_change_black"
+                    android:gravity=""
+                    android:text="24" />
+
+                <TextView
+                    android:id="@+id/show24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#f8ecc9"
+                    android:text=""
+                    android:textColor="#e97f02"
+                    android:textSize="15dp" />
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -505,55 +825,135 @@
             android:background="@drawable/layout_border"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/day41"
-                style="?android:attr/borderlessButtonStyle"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/button_change_black"
-                android:gravity=""
-                android:text="25" />
+                android:orientation="vertical">
 
-            <Button
-                android:id="@+id/day42"
-                style="?android:attr/borderlessButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/button_change_black"
-                android:gravity=""
-                android:text="26" />
+                <Button
+                    android:id="@+id/day41"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_change_black"
+                    android:gravity=""
+                    android:text="25" />
 
-            <Button
-                android:id="@+id/day43"
-                style="?android:attr/borderlessButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/button_change_black"
-                android:gravity=""
-                android:text="27" />
+                <TextView
+                    android:id="@+id/show25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#f8ecc9"
+                    android:text=""
+                    android:textColor="#e97f02"
+                    android:textSize="15dp" />
+            </LinearLayout>
 
-            <Button
-                android:id="@+id/day44"
-                style="?android:attr/borderlessButtonStyle"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/button_change_black"
-                android:gravity=""
-                android:text="28" />
+                android:orientation="vertical">
 
-            <Button
-                android:id="@+id/day45"
-                style="?android:attr/borderlessButtonStyle"
+                <Button
+                    android:id="@+id/day42"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_change_black"
+                    android:gravity=""
+                    android:text="26" />
+
+                <TextView
+                    android:id="@+id/show26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#f8ecc9"
+                    android:text=""
+                    android:textColor="#e97f02"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/button_change_black"
-                android:gravity=""
-                android:text="29" />
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/day43"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_change_black"
+                    android:gravity=""
+                    android:text="27" />
+
+                <TextView
+                    android:id="@+id/show27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#f8ecc9"
+                    android:text=""
+                    android:textColor="#e97f02"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/day44"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_change_black"
+                    android:gravity=""
+                    android:text="28" />
+
+                <TextView
+                    android:id="@+id/show28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#f8ecc9"
+                    android:text=""
+                    android:textColor="#e97f02"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/day45"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_change_black"
+                    android:gravity=""
+                    android:text="29" />
+
+                <TextView
+                    android:id="@+id/show29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#f8ecc9"
+                    android:text=""
+                    android:textColor="#e97f02"
+                    android:textSize="15dp" />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -575,10 +975,10 @@
                     android:id="@+id/show30"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:background="#f8ecc9"
                     android:text=""
-                    android:textSize="15dp"
                     android:textColor="#e97f02"
-                    android:background="#f8ecc9"/>
+                    android:textSize="15dp" />
             </LinearLayout>
 
             <Button
@@ -615,8 +1015,8 @@
             android:layout_gravity="bottom"
             android:layout_weight="1"
             android:background="@drawable/button_menu"
-            android:textColor="#8b8687"
-            android:text="d-day" />
+            android:text="d-day"
+            android:textColor="#8b8687" />
 
         <Button
             android:id="@+id/alarm"
@@ -625,8 +1025,8 @@
             android:layout_gravity="bottom"
             android:layout_weight="1"
             android:background="@drawable/button_menu"
-            android:textColor="#8b8687"
-            android:text="alarm" />
+            android:text="alarm"
+            android:textColor="#8b8687" />
 
         <Button
             android:id="@+id/setting"
@@ -635,7 +1035,7 @@
             android:layout_gravity="bottom"
             android:layout_weight="1"
             android:background="@drawable/button_menu"
-            android:textColor="#8b8687"
-            android:text="setting" />
+            android:text="setting"
+            android:textColor="#8b8687" />
     </LinearLayout>
 </LinearLayout>

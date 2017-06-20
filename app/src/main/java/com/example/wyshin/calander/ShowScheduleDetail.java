@@ -22,8 +22,10 @@ public class ShowScheduleDetail extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_schedule_detail);
+
         //intent함수를 이용하여 key값을 이용해 원하는 값을 받는다.
         Intent intent = getIntent();
+
         get_day = intent.getExtras().getInt("day");
 
         mListView = (ListView)findViewById(R.id.listView);

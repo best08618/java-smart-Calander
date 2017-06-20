@@ -2,14 +2,12 @@ package com.example.wyshin.calander;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -48,7 +46,7 @@ public class MyAdapter extends BaseAdapter{
 
         /* 'listview_custom'에 정의된 위젯에 대한 참조 획득 */
         ImageView iv_img = (ImageView) convertView.findViewById(R.id.iv_img) ;
-        TextView tv_name = (TextView) convertView.findViewById(R.id.tv_name) ;
+        final TextView tv_name = (TextView) convertView.findViewById(R.id.tv_name) ;
         TextView tv_contents = (TextView) convertView.findViewById(R.id.tv_contents) ;
         TextView tv_time = (TextView)convertView.findViewById(R.id.tv_time);
 

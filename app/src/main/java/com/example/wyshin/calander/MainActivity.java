@@ -231,8 +231,4 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-
-    public String[] getData() {
-        return data;
-    }
 }

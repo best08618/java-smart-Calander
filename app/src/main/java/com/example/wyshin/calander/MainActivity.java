@@ -84,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
     private Button day30;
 
     private Button monthly;
+    private Button alarm;
 
     private String[] data = new String[32];
     private int day;
@@ -106,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
         day30 = (Button) findViewById(R.id.day46);
 
         monthly = (Button) findViewById(R.id.main);
-
+        alarm = (Button)findViewById(R.id.alarm);
         getdata();
         show();
 
@@ -183,6 +184,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 getdata();
                 show();
+            }
+        });
+        alarm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),AlarmMainPage.class);
+                startActivity(intent);
             }
         });
     }

@@ -21,7 +21,10 @@
         </activity>
         <activity android:name=".AddSchedulepencil" />
         <activity android:name=".AddSchedulePicture" />
-        <activity android:name=".ShowScheduleDetail"></activity>
+        <activity android:name=".ShowScheduleDetail" />
+        <activity android:name=".AlarmMainPage" />
+        <activity android:name=".AlarmDayPicker" />
+        <activity android:name=".AlarmTimePicker"></activity>
     </application>
 
 </manifest>

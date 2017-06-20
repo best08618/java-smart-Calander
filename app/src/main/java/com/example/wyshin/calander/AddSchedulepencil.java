@@ -33,12 +33,18 @@ public class AddSchedulepencil extends AppCompatActivity {
     private Button time;
     private EditText edit;
     private Button okay;
+    private TextView mAlarm;
+    private Button alarm;
 
     private int year_;
     private int month_;
     private int day_;
-    private int hour_;
-    private int min_;
+    private int hour_time;
+    private int min_time;
+    private int hour_alarm;
+    private int min_alarm;
+
+    private int time_=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -51,6 +57,8 @@ public class AddSchedulepencil extends AppCompatActivity {
         time = (Button) findViewById(R.id.picktime);
         edit = (EditText)findViewById(R.id.schedule);
         okay = (Button)findViewById(R.id.submit);
+        mAlarm = (TextView)findViewById(R.id.textalarm) ;
+        alarm = (Button)findViewById(R.id.alarm);
     //date,time과 관련된 button이 눌리면 설정값을 보여준다
         date.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,12 +71,21 @@ public class AddSchedulepencil extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 showDialog(DIALOG_TIME);
+                time_ = 1;
             }
         });
+        alarm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDialog(DIALOG_TIME);
+                time_ = 0;
+            }
+        });
+
         okay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String data =  (day_)+ "/"+edit.getText().toString()+"/"+hour_+"/"+min_+"\n";
+                String data =  (day_)+ "/"+edit.getText().toString()+"/"+hour_time+"/"+min_time+"\n";
                 try{
                     FileOutputStream fos = openFileOutput("data9.txt", Context.MODE_APPEND);
                     PrintWriter pw = new PrintWriter(fos);
@@ -88,11 +105,14 @@ public class AddSchedulepencil extends AppCompatActivity {
         year_ = c.get(Calendar.YEAR);
         month_ = c.get(Calendar.MONTH);
         day_ = c.get(Calendar.DAY_OF_MONTH);
-        hour_ = c.get(Calendar.HOUR_OF_DAY);
-        min_ = c.get(Calendar.MINUTE);
+        hour_time = c.get(Calendar.HOUR_OF_DAY);
+        min_time = c.get(Calendar.MINUTE);
+        hour_alarm = c.get(Calendar.HOUR_OF_DAY);
+        min_alarm = c.get(Calendar.MINUTE);
     //사용자가 설정하기 전 처음 시간과 날짜를 print
         display_date();
         display_time();
+        //display_alarm();
 
     }
 
@@ -101,7 +121,10 @@ public class AddSchedulepencil extends AppCompatActivity {
             case DIALOG_DATE:
                 return new DatePickerDialog(this,mDateSetListener,year_,month_,day_);
             case DIALOG_TIME:
-                return new TimePickerDialog(this,mTimeSetListener,hour_,min_,false);
+                if(time_ == 1)
+                    return new TimePickerDialog(this,mTimeSetListener,hour_time,min_time,false);
+                else
+                    return new TimePickerDialog(this,mTimeSetListener,hour_alarm,min_alarm,false);
         }
         return null;
     }
@@ -109,7 +132,10 @@ public class AddSchedulepencil extends AppCompatActivity {
         mDate.setText(new StringBuilder().append(year_).append(" / ").append(month_ + 1).append(" / ").append(day_));
     }
     private void display_time(){
-        mTime.setText(new StringBuilder().append(hour_).append("시  ").append(min_).append("분"));
+        mTime.setText(new StringBuilder().append(hour_time).append("시  ").append(min_time).append("분"));
+    }
+    private void display_alarm(){
+        mAlarm.setText(new StringBuilder().append(hour_alarm).append("시  ").append(min_alarm).append("분"));
     }
     private DatePickerDialog.OnDateSetListener mDateSetListener = new DatePickerDialog.OnDateSetListener() {
         @Override
@@ -123,9 +149,16 @@ public class AddSchedulepencil extends AppCompatActivity {
     private TimePickerDialog.OnTimeSetListener mTimeSetListener = new TimePickerDialog.OnTimeSetListener() {
         @Override
         public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-            hour_ = hourOfDay;
-            min_ = minute;
-            display_time();
+            if(time_ == 1) {
+                hour_time = hourOfDay;
+                min_time = minute;
+                display_time();
+            }
+            else if(time_ == 0) {
+                hour_alarm = hourOfDay;
+                min_alarm = minute;
+                display_alarm();
+            }
         }
     };
 }

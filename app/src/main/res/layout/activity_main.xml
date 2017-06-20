@@ -1019,14 +1019,14 @@
             android:textColor="#8b8687" />
 
         <Button
-            android:id="@+id/alarm"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_weight="1"
-            android:background="@drawable/button_menu"
-            android:text="alarm"
-            android:textColor="#8b8687" />
+        android:id="@+id/alarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:background="@drawable/button_menu"
+        android:text="ALARM"
+        android:textColor="#8b8687" />
 
         <Button
             android:id="@+id/setting"

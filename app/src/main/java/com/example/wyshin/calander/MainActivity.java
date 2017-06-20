@@ -21,7 +21,7 @@ import java.util.StringTokenizer;
 
 public class MainActivity extends AppCompatActivity {
     //스케줄을 보여주기 위하여 textview 정의
-    //private TextView show1;
+    private TextView show1;
     //private TextView show2;
     private TextView show3;
     //private TextView show4;
@@ -98,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
         show15 = (TextView) findViewById(R.id.show15);
         show21 = (TextView) findViewById(R.id.show21);
         show30 = (TextView) findViewById(R.id.show30);
+        show1 = (TextView)findViewById(R.id.show5);
         day3 = (Button) findViewById(R.id.day07);
         day6 = (Button) findViewById(R.id.day13);
         day15 = (Button) findViewById(R.id.day25);

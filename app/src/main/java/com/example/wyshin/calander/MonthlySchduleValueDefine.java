@@ -250,4 +250,5 @@ public class MonthlySchduleValueDefine extends AppCompatActivity{
     public TextView getShow14() {
         return show14;
     }
+
 }

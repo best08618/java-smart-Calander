@@ -42,4 +42,12 @@ public class MyItem {
     public void setTime(String time) {
         this.time = time;
     }
+
+    public Bitmap getBm() {
+        return bm;
+    }
+
+    public void setBm(Bitmap bm) {
+        this.bm = bm;
+    }
 }

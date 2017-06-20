@@ -3,6 +3,7 @@ package com.example.wyshin.calander;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
+import android.graphics.drawable.Icon;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -66,7 +67,7 @@ public class MyAdapter extends BaseAdapter{
     }
 
     /* 아이템 데이터 추가를 위한 함수. 자신이 원하는대로 작성 */
-    public void addItem(Bitmap img, int name, String contents, String hour, String min) {
+    public void addItem(Drawable img, int name, String contents, String hour, String min) {
 
         MyItem mItem = new MyItem();
         String name1 = Integer.toString(name);

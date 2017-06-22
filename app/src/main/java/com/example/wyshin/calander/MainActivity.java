@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     //activity-main에서 각 해당하는 xml을 보여 주기 위해 button정의
     private Button monthly;//전체 월간달력 페이지로 연결
     private Button alarm;//알람 메인 페이지로 연결
+    private Button dday;
 
     //스케줄정보가 저장된 파일에서 받아온 정보를 저장하기 위한 변수
     private String[] data = new String[32];//일정을 받아오기 위한 string 배열
@@ -72,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
         //xml에서 사용되는 button과 연결, 다른 페이지로 전환시킴
         monthly = (Button) findViewById(R.id.main);
         alarm = (Button) findViewById(R.id.alarm);//click시 알람 main페이지를 띄워줌
+        dday = (Button)findViewById(R.id.dday);
 
         //파일로 부터 받은 정보에 관련된 함수
         getdata();//일정을 파일로부터 받는 함수
@@ -80,8 +82,8 @@ public class MainActivity extends AppCompatActivity {
         //툴바 추가 코드
         Toolbar toolbar;//툴바 정의
         toolbar = (Toolbar) findViewById(R.id.toolbar);//툴바변수를 xml과 연결
-        toolbar.setTitleTextColor(Color.parseColor("#000000"));//title색깔을 검은색으로 설정
-        toolbar.setNavigationIcon(R.mipmap.ic_launcher);//(xml상에)왼쪽 위에 있는 icon 설정
+        toolbar.setTitleTextColor(Color.parseColor("#ffffff"));//title색깔을 하얀색으로 설정
+        toolbar.setNavigationIcon(R.drawable.icon);//(xml상에)왼쪽 위에 있는 icon 설정
         setSupportActionBar(toolbar);//액션바와 같게 만들어줌
 
         //툴바 옵션 메뉴 아이콘 바꾸기
@@ -147,6 +149,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 getdata();
                 show();
+            }
+        });
+        dday.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),D_day_main.class);
+                startActivity(intent);
             }
         });
         /*//알람button click에 대한 event작성

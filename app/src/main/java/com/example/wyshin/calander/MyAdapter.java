@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 public class MyAdapter extends BaseAdapter{
 
-    /* 아이템을 세트로 담기 위한 어레이 */
+    //보여줄 정보를 Arraylist를 사용하여 저장
     private ArrayList<MyItem> mItems = new ArrayList<>();
 
     @Override
@@ -36,50 +36,54 @@ public class MyAdapter extends BaseAdapter{
     }
 
     @Override
+    //Adapter가 가지고 있는 data 보여주기 위한 정의 함수
     public View getView(int position, View convertView, ViewGroup parent) {
 
+        //어플리케이션 환경에 관한 글로벌 정보를 접근하기 위한 인터페이스
+        //listview에있는 위젯들을 listview_custom.xml과 연결하기 위한 변수
         Context context = parent.getContext();
 
-        /* 'listview_custom' Layout을 inflate하여 convertView 참조 획득 */
+        // 'listview_custom' Layout을 inflate하여 convertView 참조 획득
         if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflater.inflate(R.layout.listview_custom, parent, false);
+            convertView = inflater.inflate(R.layout.listview_custom, parent, false);//listview_custom을 inflate
         }
 
-        /* 'listview_custom'에 정의된 위젯에 대한 참조 획득 */
+        //'listview_custom'에 정의된 위젯에 대한 참조 획득
         ImageView iv_img = (ImageView) convertView.findViewById(R.id.iv_img) ;
         final TextView tv_name = (TextView) convertView.findViewById(R.id.tv_name) ;
         TextView tv_contents = (TextView) convertView.findViewById(R.id.tv_contents) ;
         TextView tv_time = (TextView)convertView.findViewById(R.id.tv_time);
 
-        /* 각 리스트에 뿌려줄 아이템을 받아오는데 mMyItem 재활용 */
+        //listview에 띄워줄 값들을 받아오기 위한 클래스 변수
         MyItem myItem = getItem(position);
 
-        /* 각 위젯에 세팅된 아이템을 뿌려준다 */
+        //각 위젯에 세팅된 아이템을 보여줌
         iv_img.setImageDrawable(myItem.getIcon());
         tv_name.setText(myItem.getName());
         tv_contents.setText(myItem.getContents());
         tv_time.setText(myItem.getTime());
 
-        /* (위젯에 대한 이벤트리스너를 지정하고 싶다면 여기에 작성하면된다..)  */
-
         return convertView;
     }
 
-    /* 아이템 데이터 추가를 위한 함수. 자신이 원하는대로 작성 */
+    //아이템 data 추가를 위한 함수
     public void addItem(Drawable img, int name, String contents, String hour, String min) {
 
+        //MyItem클래스 인스턴스화
         MyItem mItem = new MyItem();
+
+        //textview로 띄워줄 data 생성
         String name1 = Integer.toString(name);
         String time = hour + "시" + min + "분";
-        /* MyItem에 아이템을 setting한다. */
+
+        //MyItem에 값들을 setting해줌
         mItem.setIcon(img);
         mItem.setName(name1);
         mItem.setContents(contents);
         mItem.setTime(time);
 
-        /* mItems에 MyItem을 추가한다. */
+        //setting한 item들을 Arraylist에 추가해준다
         mItems.add(mItem);
-
     }
 }

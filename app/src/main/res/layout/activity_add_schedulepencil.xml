@@ -11,15 +11,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0.5"
+        android:background="#EE7785"
         android:gravity="center"
         android:orientation="horizontal">
 
-        <Button
+        <ImageView
+            android:id="@+id/button"
             style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/button_transparent" />
+            android:src="@drawable/icon"
+            android:background="#EE7785" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -27,15 +30,16 @@
             android:layout_weight="20"
             android:gravity="center"
             android:text="Add New Schedule"
-            android:textColor="#000000"
+            android:textColor="#FFFFFF"
             android:textSize="20dp" />
 
         <Button
             android:id="@+id/submit"
             style="?android:attr/borderlessButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
             android:background="@drawable/button_transparent"
             android:text="ok" />
     </LinearLayout>
@@ -44,18 +48,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:orientation="horizontal"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="2"
             android:gravity="center"
             android:text="Date"
-            android:textSize="20dp"
-            android:textColor="@color/colorPrimary"/>
+            android:textColor="@color/colorPrimary"
+            android:textSize="20dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -82,7 +86,11 @@
 
         </LinearLayout>
     </LinearLayout>
-
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_centerInParent="true"
+        android:background="#EE7785" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -126,7 +134,11 @@
         </LinearLayout>
 
     </LinearLayout>
-
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_centerInParent="true"
+        android:background="#EE7785" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -152,10 +164,12 @@
             android:ems="5"
             android:inputType="text"
             android:hint="enter your schedule" />
-
-
     </LinearLayout>
-
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_centerInParent="true"
+        android:background="#EE7785" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

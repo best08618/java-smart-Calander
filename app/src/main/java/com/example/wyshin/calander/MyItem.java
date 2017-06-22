@@ -1,12 +1,10 @@
 package com.example.wyshin.calander;
 
-import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 
 public class MyItem {
 
     private Drawable icon;
-    private Bitmap bm;
     private String name;
     private String contents;
     private String time;
@@ -41,13 +39,5 @@ public class MyItem {
 
     public void setTime(String time) {
         this.time = time;
-    }
-
-    public Bitmap getBm() {
-        return bm;
-    }
-
-    public void setBm(Bitmap bm) {
-        this.bm = bm;
     }
 }

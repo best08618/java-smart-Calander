@@ -6,4 +6,11 @@
     android:layout_height="match_parent"
     tools:context="com.example.wyshin.calander.AddSchedulePicture">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="180dp"
+        android:textSize="50dp"
+        android:text="데모입니다\n 카메라는 d-day페이지에서 확인하세요:)"/>
 </android.support.constraint.ConstraintLayout>

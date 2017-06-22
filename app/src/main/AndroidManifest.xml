@@ -24,7 +24,9 @@
         <activity android:name=".ShowScheduleDetail" />
         <activity android:name=".AlarmMainPage" />
         <activity android:name=".AlarmDayPicker" />
-        <activity android:name=".AlarmTimePicker"></activity>
+        <activity android:name=".AlarmTimePicker" />
+        <activity android:name=".D_day_main" />
+        <activity android:name=".D_day"></activity>
     </application>
 
 </manifest>
